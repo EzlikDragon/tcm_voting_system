@@ -1,0 +1,20 @@
+
+
+body{
+    overflow: hidden;
+}
+
+span{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 90%;
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-attachment: fixed ;
+    background-size: cover;
+    pointer-events: none;
+    filter: saturate(-10%);
+
+}
+

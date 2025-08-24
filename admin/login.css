@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --accent-color: #113325;
+    --base-color: white;
+    --text-color: #113325;
+    --input-color: #E7E0CA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Poppins, Segoe UI, sans-serif;
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
+    
+}
+
+body {
+    background-image: url('includes/Images/hero.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Ensure the body takes full viewport height */
+}
+
+.wrapper {
+  box-sizing: border-box;
+  background-color: var(--base-color);
+  height: 100vh;
+  width: max(40%, 600px);
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 30px 2px #113325; /* Example with 2px offset, 10px blur */
+  
+
+  .cmlogo{
+    width: 150px;
+    height: auto;
+  }
+
+  .slicky{
+    width: 90px;
+    height: auto;
+
+  }
+
+  .letsgo{
+    font-size: 20px;
+  }
+  /* Centering */
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Position it at the mid-point of the Y-axis */
+  left: 50%; /* Position it at the mid-point of the X-axis */
+  transform: translate(-50%, -50%); /* Move it back by half of its own width and height */
+}
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: 5px;
+}
+
+form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 70px;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+}
+
+form input:hover {
+    border-color: var(--accent-color);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+div:has(input:focus) > label {
+    background-color: var(--text-color);
+}
+
+form input::placeholder {
+    color: var(--text-color);
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover {
+    background-color: var(--text-color);
+}
+
+form button:focus {
+    outline: none;
+    background-color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: #9bd1bb;
+font-weight: bold;
+
+
+}
+a:hover {
+    text-decoration: underline;
+    color: #113325;
+    font-weight: bold;
+    font-stretch: expanded;
+}
+
+@media(max-width: 1100px) {
+    .wrapper {
+        width: min(600px, 100%);
+        border-radius: 0;
+    }
+}
+
+form div.incorrect label {
+    background-color: #f06272;
+}
+
+form div.incorrect input {
+    border-color: #f06272;
+}
+
+#error-message {
+    color: #f06272;
+}
+
+/* The modal (hidden by default) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal styles */
+#mediaModal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Modal content (the video player) */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px; /* You may want to set a max width here */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}

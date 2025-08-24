@@ -1,0 +1,254 @@
+body {
+    background-image: url(images-JQD/buildingjpg.jpg);
+    background-position: center;  
+    background-attachment: fixed;  
+    background-size: cover;        
+    margin: 0;                    
+    padding: 0; 
+}
+
+.headerbox {
+    position: relative;
+    z-index: 1;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    height: 120PX;
+    transform: scale(0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: -15px;
+}
+.headerbox:hover {
+    transform: scale(1.0) translateX(19px); /* Scale up and move up */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    /* Optionally, you can add a color change or other effects */
+}
+
+.headerbox img {
+    width: 250px; 
+    height: auto; 
+    margin: 0 30px; /* Combined margins for simplicity */
+}
+
+.navbar {
+    display: flex;                
+    justify-content: center;      
+    padding: 15px 0;           
+    font-family: Arial, Helvetica, sans-serif;  
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+    margin-right: 70px;
+}
+.info {
+    display: flex; 
+    flex-direction: column; 
+
+}
+h1{
+    margin-left: 255px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration:none;  /* Removes underline */
+    color: inherit;  
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);        /* Makes the link color the same as surrounding text */
+}
+a:active {
+    transform: translateY(0);
+    text-decoration:underline;
+    /* Resets position when clicked */
+    color: #0056b3;              /* Darker color when clicked */
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.9);         /* Removes shadow when clicked */
+}
+
+
+.nobullets {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    text-align: right; /* Align text to the right */
+}
+.nobullets li {
+    margin-bottom: 10px; /* Optional: Add some space between items */
+    margin-right: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.btn {
+    display: inline-block; 
+    padding: 5px 47px; 
+    color: black; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    text-align: center; 
+    margin: 0 5px; 
+    font-size: 12px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: #0056b3;    
+}
+
+/* HOME SECTION 1 */
+
+
+.home1 {
+    margin-top: 150px;
+    background-image: url('images-JQD/overview.jpg'); /* Replace with the path to your background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    width: 100%;
+    padding: 20px; /* Adjust padding as needed */
+    color: white; /* Optional: Change text color for better contrast */
+    display: flex; /* Optional: Use flexbox for better alignment */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    transition: filter 0.5s ease-in-out 0.1s; /* Adds a smooth transition with a delay */
+    filter: blur(90px); /* Set initial blur to 0 */
+    opacity: 0.5;
+    
+}
+
+
+
+.home1:hover {
+    filter: blur(0px) ; /* Blurs the background image on hover */
+    opacity: 0.9;
+}
+.home2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-image: url('images-JQD/vision.jpg'); /* Replace with the path to your background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    width: 100%;
+    padding: 20px; /* Adjust padding as needed */
+    color: white; /* Optional: Change text color for better contrast */
+    display: flex; /* Optional: Use flexbox for better alignment */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    transition: filter 0.5s ease-in-out 0.1s; /* Adds a smooth transition with a delay */
+    filter: blur(90px); /* Set initial blur to 0 */
+    opacity: 0.5;
+    
+}
+
+.home2:hover {
+    filter: blur(0px); /* Blurs the background image on hover */
+    opacity: 0.9;
+}
+
+.home3 {
+    margin-top: 0px;
+    background-image: url('images-JQD/mission.jpg'); /* Replace with the path to your background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    width: 100%;
+    padding: 20px; /* Adjust padding as needed */
+    color: white; /* Optional: Change text color for better contrast */
+    display: flex; /* Optional: Use flexbox for better alignment */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    transition: filter 0.5s ease-in-out 0.1s; /* Adds a smooth transition with a delay */
+    filter: blur(90px); /* Set initial blur to 0 */
+    opacity: 0.5;
+    
+}
+
+.home3:hover {
+    filter: blur(0px); /* Blurs the background image on hover */
+    opacity: 0.9;
+}
+
+.intro, .intro2, .intro3 {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove padding if any */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.intro h1, .intro2 h2, .intro3 h2, .intro p {
+    margin: 0; /* Remove margins for headings and paragraphs */
+    padding: 0; /* Remove padding for headings and paragraphs */
+}
+
+.intro {
+    margin-bottom: 0; /* Ensure no margin below the first intro */
+}
+
+.intro2 {
+    margin-top: 0; /* Ensure no margin above the second intro */
+}
+
+.intro3 {
+    margin-top: 0; /* Ensure no margin above the third intro */
+}
+
+
+
+
+
+
+.overview, .mission, .vision {
+    text-align: center;
+    font-size: 2.5rem; /* Medium font size for subheadings */
+    font-weight: 600; /* Semi-bold text */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    margin: 1em 0 0.5em; /* Space around subheadings */
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+}
+
+p {
+    font-size: 1.5rem; /* Regular font size for paragraphs */
+    line-height: 1.6; /* Increased line height for better readability */
+    max-width: 600px; /* Limits the width of the paragraphs */
+    text-align: center; /* Center-align text */
+    margin: 0.5em 0; /* Space around paragraphs */
+    opacity: 0.9; /* Slightly transparent for a soft look */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    height: 200PX;
+    margin: 0 0;
+    
+}
+
+.footer img{
+    width: 300px;
+    height: auto;
+    margin-left:  30px;
+    margin-bottom: 20px;
+}
+
+.info{
+    margin-bottom: 5px;
+}
