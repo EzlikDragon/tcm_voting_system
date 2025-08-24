@@ -52,6 +52,7 @@ Always show details
 Copy
 http://localhost/tcm_voting_system
 🔑 Default Accounts
+
 Admin Login
 Username: adminuser
 
@@ -194,4 +195,5 @@ Ensure correct ON DELETE CASCADE and ON UPDATE CASCADE rules for relational inte
 👨‍💻 Author
 Developed by EzlikDragon @ SlickLab
 For inquiries or collaboration, connect via GitHub.
+
 """
